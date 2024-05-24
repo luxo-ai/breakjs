@@ -46,4 +46,4 @@ AT THE BOTTOM
 
 **Notes:** 
 - Compiling using `tsc` generates JS that works correctly. 
-- Compiling to modern JS generates code that works correctly. 
+- Compiling to modern JS (with microbundle) generates code that works correctly. 
