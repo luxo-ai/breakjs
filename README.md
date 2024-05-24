@@ -1,6 +1,6 @@
 # Generate Broken CommonJS Code
 
-[Microbundle](https://github.com/developit/microbundle) generates broken CommonJS code when compiling from Typescript. The `continue` keyword compiled JS is not respected. The problem is caused by the usage of `async/await` within the while loop. Commenting out: `await new Promise((resolve) => setTimeout(resolve, 100));` produces the expected result. 
+[Microbundle](https://github.com/developit/microbundle) generates broken CommonJS code when compiling from Typescript. The `continue` keyword in the compiled JS is not respected. The problem is caused by the usage of `async/await` within the while loop. Commenting out: `await new Promise((resolve) => setTimeout(resolve, 100));` produces the expected result. 
 
 **Input** - `index.ts`
 
