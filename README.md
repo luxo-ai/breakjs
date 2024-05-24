@@ -35,7 +35,7 @@ AT THE TOP
 	- j === 1
 	- waiting for 100ms
 	- continue, next log will be "AT THE TOP"
-AT THE BOTTOM
+AT THE BOTTOM   <--------- This should be "AT THE TOP"
 AT THE TOP
 AT THE BOTTOM
 AT THE TOP
