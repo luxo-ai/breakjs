@@ -1,6 +1,6 @@
 # Broken TS -> JS Code
 
-Mircobundle generates broken commonJS code in this example.
+Mircobundle generates broken commonJS code. In the following example, the continue keyword is ignored. This only happens when with an `async`/`await` statement in the loop.
 
 Input (`index.ts`):
 
