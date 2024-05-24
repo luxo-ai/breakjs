@@ -1,0 +1,24 @@
+{
+  "name": "breakjs",
+  "version": "1.0.0",
+  "repository": "git+https://github.com/luxo-ai/breakjs.git",
+  "author": "luxo-a",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "source": "index.ts",
+  "module": "./dist/index.modern.js",
+  "scripts": {
+    "build": "microbundle --format modern,cjs --no-sourcemap",
+    "prebuild": "yarn rimraf dist",
+    "start": "node dist/index.cjs"
+  },
+  "dependencies": {
+    "microbundle": "^0.15.1"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  }
+}
