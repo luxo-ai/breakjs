@@ -1,8 +1,8 @@
-# Broken TS -> JS Code
+# Generate Broken CommonJS Code
 
-Mircobundle generates broken commonJS code. In the following example, the continue keyword is ignored. This only happens when with an `async`/`await` statement in the loop.
+[Microbundle](https://github.com/developit/microbundle) generates broken CommonJS code when compiling from Typescript. The `continue` keyword compiled JS is not respected. The problem is caused by the usage of `async/await` within the while loop. Commenting out: `await new Promise((resolve) => setTimeout(resolve, 100));` produces the expected result. 
 
-Input (`index.ts`):
+**Input** - `index.ts`
 
 ```ts
 async function brokenContinue() {
@@ -27,7 +27,7 @@ async function brokenContinue() {
 void brokenContinue();
 ```
 
-Output (`dist/index.cjs`)
+**Output** - `dist/index.cjs`
 
 ```
 $ node dist/index.cjs
@@ -43,3 +43,7 @@ AT THE BOTTOM
 AT THE TOP
 AT THE BOTTOM
 ```
+
+**Notes:** 
+- Compiling using `tsc` generates JS that works correctly. 
+- Compiling to modern JS generates code that works correctly. 
